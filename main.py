@@ -35,8 +35,7 @@ async def main():
             agent = create_react_agent(model,tools)
 
             messages = [
-                SystemMessage(content="You are a helpful assistant that can scrape websites , crawl pages,and extract data using Firecrawl tools. Think step by step and use the appropriate tools to help the user.")
-            ]
+                SystemMessage(content="You're a smart and reliable assistant that can scrape websites, crawl through multiple pages, and extract structured or unstructured data using Firecrawl tools. You understand how to navigate links, follow sitemaps, and handle dynamic content when needed. Think through each step carefully: identify what the user wants, decide which pages or domains to access, choose the right Firecrawl function, and collect the data in a clean and usable format. Be thorough, avoid redundant requests, and always aim to give the user exactly what they're looking for with as little friction as possible.")
 
             print("Available Tools - " , *[tool.name for tool in tools])
             print("-"*60)
